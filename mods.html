@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моды | СарайКРАФТ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --p: #00f2fe; --s: #4facfe; --warn: #ff4500; --bg: #050505; }
+
+        body {
+            background: var(--bg);
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px 5%;
+            overflow-x: hidden;
+        }
+
+        /* Анимированный фон как на главной */
+        .bg-grid {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(0, 242, 254, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 242, 254, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; position: relative; }
+
+        h1 { 
+            font-size: 3rem; 
+            font-weight: 900; 
+            text-align: center; 
+            text-transform: uppercase; 
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px var(--p);
+        }
+
+        .main-dl {
+            background: linear-gradient(90deg, #ff00cc, #3333ff);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            text-decoration: none;
+            display: block;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 900;
+            transition: 0.3s;
+            box-shadow: 0 0 30px rgba(255, 0, 204, 0.3);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .main-dl:hover { transform: scale(1.02); box-shadow: 0 0 50px rgba(255, 0, 204, 0.5); }
+
+        .section-title { 
+            border-left: 5px solid var(--p); 
+            padding-left: 20px; 
+            margin: 50px 0 25px; 
+            color: var(--p); 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .mod-btn {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ccc;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mod-btn:hover { 
+            border-color: var(--p); 
+            color: white; 
+            background: rgba(0, 242, 254, 0.1); 
+            transform: translateY(-3px);
+        }
+        .mod-btn::after { content: 'JAR'; font-size: 0.7rem; background: var(--p); color: #000; padding: 2px 6px; border-radius: 4px; font-weight: 900; }
+
+        .footer { text-align: center; margin-top: 100px; opacity: 0.4; font-size: 0.8rem; }
+        .back-link { color: var(--p); text-decoration: none; display: block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← ВЕРНУТЬСЯ В САРАЙ</a>
+        <h1>СКЛАД МОДИФИКАЦИЙ</h1>
+
+        <a href="/mods/mods.zip" class="main-dl">СКАЧАТЬ ВЕСЬ ПАК (.ZIP)</a>
+
+        <h2 class="section-title">ОСНОВНОЙ КОНТЕНТ</h2>
+        <div class="grid">
+            <a href="/mods/[1.12.2] SecurityCraft v1.10.1.jar" class="mod-btn">SecurityCraft v1.10.1</a>
+            <a href="/mods/Immersive Vehicles-1.12.2-22.18.0-pre.jar" class="mod-btn">Immersive Vehicles</a>
+            <a href="/mods/industrialcraft-2-2.8.222-ex112.jar" class="mod-btn">IndustrialCraft 2 Exp</a>
+            <a href="/mods/buildcraft-all-8.0.0.jar" class="mod-btn">BuildCraft All</a>
+            <a href="/mods/OpenComputers-MC1.12.2-1.8.9a+8ca336f.jar" class="mod-btn">OpenComputers</a>
+            <a href="/mods/ElectroblobsWizardry-4.3.15.jar" class="mod-btn">Electroblobs Wizardry</a>
+            <a href="/mods/railcraft-12.0.0.jar" class="mod-btn">Railcraft</a>
+            <a href="/mods/Cyclic-1.12.2-1.20.14.jar" class="mod-btn">Cyclic</a>
+            <a href="/mods/chiselsandbits-14.33.jar" class="mod-btn">Chisels and Bits</a>
+            <a href="/mods/furniture-6.3.2-1.12.2.jar" class="mod-btn">Furniture (Crayfish)</a>
+            <a href="/mods/Locks-1.12.2-3.0.0.jar" class="mod-btn">Locks</a>
+            <a href="/mods/RedstoneControl-1.12.2-0.3.1.3.jar" class="mod-btn">Redstone Control</a>
+            <a href="/mods/Computronics-1.12.2-1.6.6.jar" class="mod-btn">Computronics</a>
+            <a href="/mods/OpenGlasses-MC1.12.2-2.2-53.jar" class="mod-btn">OpenGlasses</a>
+            <a href="/mods/MTS Official Pack-1.12.2-V28.2.jar" class="mod-btn">MTS Official Pack</a>
+        </div>
+
+        <h2 class="section-title">ОПЦИОНАЛЬНЫЕ/ОПТИМИЗАЦИЯ/ЗАВИСИМОСТИ</h2>
+        <div class="grid">
+            <a href="/mods/OptiFine-1.12.2_HD_U_G6_pre1.jar" class="mod-btn" style="border-color: var(--warn);">OptiFine HD G6</a>
+            <a href="/mods/BetterFps-1.4.8.jar" class="mod-btn">BetterFps</a>
+            <a href="/mods/foamfix-0.10.15-1.12.2.jar" class="mod-btn">FoamFix</a>
+            <a href="/mods/litematica-forge-1.12.2-0.0.0-dev.20191217.195055.jar" class="mod-btn">Litematica (Forge)</a>
+            <a href="/mods/malilib-forge-1.12.2-0.10.0-dev.23.nomixin.jar" class="mod-btn">MaLiLib</a>
+            <a href="/mods/CD4017BE_lib-1.12.2-6.5.1.jar" class="mod-btn">CD4017BE Lib</a>
+            <a href="/mods/Commons0815-1.12.2-1.4.0.jar" class="mod-btn">Commons0815</a>
+        </div>
+
+        <div class="footer">
+            <p>卍 КИТСА СТУДИО — КРАФТИМ БУДУЩЕЕ 卍</p>
+            <p>Created by Baser for CuboBuilder & Lcl</p>
+        </div>
+    </div>
+</body>
+</html>
